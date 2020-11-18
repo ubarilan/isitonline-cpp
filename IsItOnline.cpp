@@ -11,10 +11,10 @@ int main() {
 	cin >> hostname;
 	string pingHostname = "ping " + hostname + " -n 1";
 	char* pingHostnameAsChar = &pingHostname[0];
-	system("cls");
+	system("cls"); // "clear" for linux
 	cout << "Please wait...";
 	int ping = system(pingHostnameAsChar);
-	system("cls");
+	system("cls"); // "clear" for linux
 	if (ping == 0) {
 		cout << green << "Host " << hostname << " is online!" << endl;
 	} else {
